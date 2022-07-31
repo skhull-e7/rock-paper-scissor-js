@@ -45,6 +45,71 @@
         // make computerChoice the output for this function
         return computerChoice;
         }
+
+        // make a function that plays one round of game
+        // name it playRound
+        function playRound() {
+
+        // make a variable to store user's input
+        // name it userInput
+        let userInput;
+
+        // ask user to give his input as Rock, Paper, Scissor
+        // take input of user and store it in userInput
+        userInput = prompt("Enter Rock, Paper, Scissor for your decision.\nBy default, your choice is Rock.");
+
+        // process the userInput to every alphabet and case and make default if user inputs something wrong
+        userInput = userInput.toUpperCase();
+        if (userInput != 'ROCK' && userInput != 'PAPER' && userInput != 'SCISSOR'){
+            userInput='ROCK';
+        }
+        
+        // make another variable to store computer's input
+        // name it compInput
+        let compInput;
+
+        // call the getComputerChoice function to get computer choice
+        // store the computer choice in compInput and process it
+        compInput = getComputerChoice().toUpperCase();
+
+        // IF userInput is PAPER and compINPUT is ROCK
+        // THEN user wins
+        // print the winning message for user
+        if (userInput === 'PAPER' && compInput === 'ROCK'){
+            console.log(`You Win! ${userInput} wins over ${compInput}`);
+        }
+
+        // ELSE IF userInput is ROCK and compInput is Scissor
+        // THEN user wins
+        // print the winning message for user
+        else if (userInput === 'ROCK' && compInput === 'SCISSOR'){
+            console.log(`You Win! ${userInput} wins over ${compInput}`);
+        }
+
+        // ELSE IF userInput is SCISSOR and compInput is PAPER
+        // THEN user wins
+        // print the winning message for user
+        else if (userInput === 'SCISSOR' && compInput === 'PAPER'){
+            console.log(`You Win! ${userInput} wins over ${compInput}`);
+        }
+        
+        // ELSE IF userInput and compInput are same
+        // THEN no one wins
+        // print TIE message for user
+        else if (userInput === compInput){
+            console.log(`Tie! No One Won! You both entered ${userInput}`);
+        }
+        
+        // ELSE if anything other than these condition
+        // THEN computer wins
+        // print losing message for user
+        else {
+            console.log(`You Lose! ${compInput} wins over ${userInput}`);
+        }
+
+        // this function is only playable
+        // it does not return any value to console
+        }
     </script>
 </head>
 <body>
