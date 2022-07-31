@@ -7,6 +7,44 @@
     <title>rockPaperScissor</title>
     <script>
 
+        // make a function which will give the output as "Rock" "paper" or "scissor"
+        // name it 'getComputerChoice'
+        function getComputerChoice(){
+
+        // make a variable to store a number
+        // name it num
+        let num;
+
+        // store a random 1-100 digit number in that num variable
+        // Math.random returns a number between 0-1 and multiplying it with 10 gives a decimal number between 0-100
+        // Math.floor will make the number go to nearest integer
+        num = Math.floor(Math.random()*100) 
+
+        // make another variable to store the output for function, e.g, Rock, Paper, Scissor
+        // name it computerChoice
+        let computerChoice;
+
+        // IF num is less that 33
+        // THEN set computerChoice to Rock
+        if (num<=33){
+            computerChoice = 'Rock';
+        }
+
+        // BUT IF num is less than 67 and greater than 33
+        // THEN set computerChoice to Paper
+        else if (num>33 && num<67){
+            computerChoice = 'Paper';
+        }
+
+        // AND IF all conditions don't apply, e.g., num greater than 67
+        // THEN set computerChoice to Scissor
+        else {
+            computerChoice = 'Scissor';
+        }
+
+        // make computerChoice the output for this function
+        return computerChoice;
+        }
     </script>
 </head>
 <body>
