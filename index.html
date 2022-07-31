@@ -50,6 +50,10 @@
         // name it playRound
         function playRound() {
 
+        // make a variable to store result of this round
+        // name it playResult
+        let platResult;
+
         // make a variable to store user's input
         // name it userInput
         let userInput;
@@ -63,7 +67,7 @@
         if (userInput != 'ROCK' && userInput != 'PAPER' && userInput != 'SCISSOR'){
             userInput='ROCK';
         }
-        
+
         // make another variable to store computer's input
         // name it compInput
         let compInput;
@@ -76,39 +80,39 @@
         // THEN user wins
         // print the winning message for user
         if (userInput === 'PAPER' && compInput === 'ROCK'){
-            console.log(`You Win! ${userInput} wins over ${compInput}`);
+            playResult = `You Win! ${userInput} wins over ${compInput}`;
         }
 
         // ELSE IF userInput is ROCK and compInput is Scissor
         // THEN user wins
         // print the winning message for user
         else if (userInput === 'ROCK' && compInput === 'SCISSOR'){
-            console.log(`You Win! ${userInput} wins over ${compInput}`);
+            playResult = (`You Win! ${userInput} wins over ${compInput}`);
         }
 
         // ELSE IF userInput is SCISSOR and compInput is PAPER
         // THEN user wins
         // print the winning message for user
         else if (userInput === 'SCISSOR' && compInput === 'PAPER'){
-            console.log(`You Win! ${userInput} wins over ${compInput}`);
+            playResult = `You Win! ${userInput} wins over ${compInput}`;
         }
         
         // ELSE IF userInput and compInput are same
         // THEN no one wins
         // print TIE message for user
         else if (userInput === compInput){
-            console.log(`Tie! No One Won! You both entered ${userInput}`);
+            playResult = (`Tie! No One Won! You both entered ${userInput}`);
         }
         
         // ELSE if anything other than these condition
         // THEN computer wins
         // print losing message for user
         else {
-            console.log(`You Lose! ${compInput} wins over ${userInput}`);
+            playResult = (`You Lose! ${compInput} wins over ${userInput}`);
         }
 
-        // this function is only playable
-        // it does not return any value to console
+        // return the message of the result
+        return playResult;
         }
     </script>
 </head>
