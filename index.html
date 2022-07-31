@@ -114,6 +114,67 @@
         // return the message of the result
         return playResult;
         }
+
+        // make a function to play game for five rounds and decide who is winner
+        // name it playGame
+        function playGame() {
+
+        // make a variable to count the user wins
+        // name it userWinCount
+        let userWinCount;
+
+        // make a variable to count the computer wins
+        // name it compWinCount
+        let compWinCount;
+
+        // make a variable to get one round result 
+        // name it roundResult
+        let roundResult;
+
+        // make a loop to play 5 games
+        for (i=0; i<5; i++){
+        // call playRound function to play a round
+        // process the result given by playRound function
+        // store the result to roundResult
+        roundResult = playRound();
+
+        // IF user won
+        // THEN add 1 to userWinCount
+        if (roundResult.startsWith('You Win')){
+            userWinCount += 1;
+        }
+
+        // ELSE IF computer won
+        // THEN add 1 to compWinCount
+        else if (roundResult.startsWith('You Lose')){
+            compWinCount += 1;
+        }
+
+        // ELSE if it was a tie
+        // THEN do nothing
+        else{}
+
+        }
+        // loop it for 5 times
+
+        // IF userWinCount is greater than compWinCount
+        // THEN print user wins
+        if (userWinCount > compWinCount){
+            console.log('You Win!!');
+        }
+
+        // ELSE IF userWinCount is less than compWinCount
+        // THEN print computer wins
+        else if (compWinCount > userWinCount){
+            console.log('You Lose!!');
+        }
+        
+        // ELSE both have equal scores
+        // THEN print TIE
+        else {
+            console.log('TIE!!!');
+        }
+        }
     </script>
 </head>
 <body>
